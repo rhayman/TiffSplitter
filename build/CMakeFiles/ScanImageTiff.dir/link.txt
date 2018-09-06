@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libScanImageTiff.so -o libScanImageTiff.so CMakeFiles/ScanImageTiff.dir/src/ScanImageTiff.cpp.o 

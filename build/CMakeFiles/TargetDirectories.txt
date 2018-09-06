@@ -1,0 +1,4 @@
+/home/robin/Dropbox/Programming/c/TiffSplitter/build/CMakeFiles/rebuild_cache.dir
+/home/robin/Dropbox/Programming/c/TiffSplitter/build/CMakeFiles/edit_cache.dir
+/home/robin/Dropbox/Programming/c/TiffSplitter/build/CMakeFiles/ScanImageTiff.dir
+/home/robin/Dropbox/Programming/c/TiffSplitter/build/CMakeFiles/TiffSplitter.dir

@@ -121,8 +121,20 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	int count = 0;
+	/*
+	libtiff has a maximum limit of 65535 frames per tiff file and throws an error if the number
+	of frames is equal to or greater than this number - need to account for that here and sensibly
+	traverse the file and save it...
+	*/
+	std::cout << "Counting directories in this tiff file (may take a while)..." << std::endl;
 	reader->countDirectories(count);
-	std::cout << "There are " << count << " frames in this tiff file" << std::endl;
+	if ( count >= 65535) {
+		std::cout << "\nWARNING: This file contains more than 65535 frames.\n";
+		std::cout << "This means I can only save the first 65535 frames," << std::endl;
+		std::cout << "i.e. the total number of frames from all chunks will equal 65535" << std::endl;
+	}
+	else
+		std::cout << "There are " << count << " frames in this tiff file" << std::endl;
 	std::string software_tag;
 	std::string image_tag;
 	cv::TiffWriter writer;
